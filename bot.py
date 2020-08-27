@@ -39,7 +39,6 @@ async def geo(ctx, *, ipadd):
 async def geo_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         embed = discord.Embed(description=f'❌ Please make sure to include the IP\n```%geo <IP>```', color=discord.Color.dark_red())
-        embed.set_author(name=f'{ctx.author}', icon_url=f'{ctx.author.avatar_url}')
         await ctx.send(embed=embed)        
 
 @bot.command()
@@ -53,7 +52,6 @@ async def scan(ctx, arg1):
 async def scan_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         embed = discord.Embed(description=f'❌ Please make sure to include the IP\n```%scan <IP>```', color=discord.Color.dark_red())
-        embed.set_author(name=f'{ctx.author}', icon_url=f'{ctx.author.avatar_url}')
         await ctx.send(embed=embed)       
 
 @bot.command()
@@ -95,7 +93,6 @@ async def ping(ctx, ip):
 async def ping_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         embed = discord.Embed(description=f'❌ Please make sure to include the IP\n```%ping <IP>```', color=discord.Color.dark_red())
-        embed.set_author(name=f'{ctx.author}', icon_url=f'{ctx.author.avatar_url}')
         await ctx.send(embed=embed)
 
 start_time = datetime.datetime.utcnow() # Timestamp of when it came online
