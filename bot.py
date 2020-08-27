@@ -95,10 +95,10 @@ async def ping_error(ctx, error):
         embed = discord.Embed(description=f'❌ Please make sure to include the IP\n```%ping <IP>```', color=discord.Color.dark_red())
         await ctx.send(embed=embed)
 
-start_time = datetime.datetime.utcnow() # Timestamp of when it came online
+start_time = datetime.datetime.utcnow()
 @bot.command(pass_context=True)
 async def uptime(ctx: commands.Context):
-    now = datetime.datetime.utcnow() # Timestamp of when uptime function is run
+    now = datetime.datetime.utcnow() 
     delta = now - start_time
     hours, remainder = divmod(int(delta.total_seconds()), 3600)
     minutes, seconds = divmod(remainder, 60)
